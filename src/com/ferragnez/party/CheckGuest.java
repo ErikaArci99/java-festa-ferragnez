@@ -70,5 +70,6 @@ public class CheckGuest {
         } else {
             System.out.println("Spiacente, " + name + ", non sei nella lista degli invitati. Torna indietro.");
         }
+
     }
 }
