@@ -42,8 +42,8 @@ public class CheckGuest {
         // chiedere il nome all'utente
         System.out.print(" Inserisci il tuo nome: ");
 
-        // leggere il nome inserito dall'utente
-        String name = scanner.nextLine();
+        // leggere il nome inserito dall'utente (.trim per eliminare spazi extra)
+        String name = scanner.nextLine().trim();
 
         // chiudo scanner
         scanner.close();
