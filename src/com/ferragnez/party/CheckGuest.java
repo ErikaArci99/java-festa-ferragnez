@@ -39,4 +39,10 @@ public class CheckGuest {
     // scanner per leggere l'input dell'utente
     Scanner scanner = new Scanner(System.in);
 
+    // chiedere il nome all'utente
+    System.out.print("Inserisci il tuo nome: ");
+
+    //leggere il nome inserito dall'utente
+    String name = scanner.nextLine();
+
 }
