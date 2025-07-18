@@ -14,6 +14,8 @@
 //Lista invitati: 
 //Dua Lipa, Paris Hilton, Manuel Agnelli, J-Ax, Francesco Totti, Ilary Blasi, Bebe Vio, Luis, Pardis Zarei, Martina Maccherone, Rachel Zeilic
 
+//ESERCIZIO TERMINATO
+
 package com.ferragnez.party;
 
 import java.util.Scanner;
