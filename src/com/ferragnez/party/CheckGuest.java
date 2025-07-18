@@ -38,7 +38,7 @@ public class CheckGuest {
         Scanner scanner = new Scanner(System.in);
 
         // chiedere il nome all'utente
-        System.out.print("Inserisci il tuo nome: ");
+        System.out.print(" Inserisci il tuo nome: ");
 
         // leggere il nome inserito dall'utente
         String name = scanner.nextLine();
@@ -55,13 +55,20 @@ public class CheckGuest {
         // ciclo while per cercare il nome nella lista degli invitati
         while (!found && index < guest.length) {
             // se il nome corrente corrisponde a quello inserito dall'utente
-            if (guest[index] == name) {
+            // (equalIgnoreCase per ignorare le differenze tra maiuscole e minuscole)
+            if (guest[index].equalsIgnoreCase(name)) {
                 found = true; // segna come trovato
-                break; // esce dal ciclo
             } else {
                 // se il nome non corrisponde, continua a cercare
                 index++;
             }
+        }
+
+        // verifica se il nome è stato trovato
+        if (found) {
+            System.out.println("Benvenuto alla festa, " + name + "!");
+        } else {
+            System.out.println("Spiacente, " + name + ", non sei nella lista degli invitati. Torna indietro.");
         }
     }
 }
