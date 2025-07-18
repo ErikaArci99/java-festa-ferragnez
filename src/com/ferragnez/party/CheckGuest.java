@@ -34,15 +34,34 @@ public class CheckGuest {
                 "Martina Maccherone",
                 "Rachel Zeilic"
         };
+        // scanner per leggere l'input dell'utente
+        Scanner scanner = new Scanner(System.in);
+
+        // chiedere il nome all'utente
+        System.out.print("Inserisci il tuo nome: ");
+
+        // leggere il nome inserito dall'utente
+        String name = scanner.nextLine();
+
+        // chiudo scanner
+        scanner.close();
+
+        // variabile per tenere traccia se il nome è stato trovato
+        boolean found = false;
+
+        // variabile per tenere traccia l'indice del nome corrente
+        int index = 0;
+
+        // ciclo while per cercare il nome nella lista degli invitati
+        while (!found && index < guest.length) {
+            // se il nome corrente corrisponde a quello inserito dall'utente
+            if (guest[index] == name) {
+                found = true; // segna come trovato
+                break; // esce dal ciclo
+            } else {
+                // se il nome non corrisponde, continua a cercare
+                index++;
+            }
+        }
     }
-
-    // scanner per leggere l'input dell'utente
-    Scanner scanner = new Scanner(System.in);
-
-    // chiedere il nome all'utente
-    System.out.print("Inserisci il tuo nome: ");
-
-    //leggere il nome inserito dall'utente
-    String name = scanner.nextLine();
-
 }
