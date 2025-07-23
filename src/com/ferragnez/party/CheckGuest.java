@@ -66,6 +66,14 @@ public class CheckGuest {
             }
         }
 
+        // metodo con il ciclo for
+        for (int i = 0; !found && i < guest.length; i++) {
+            // se il nome corrente corrisponde a quello inserito dall'utente
+            if (guest[i].equalsIgnoreCase(name)) {
+                found = true; // segna come trovato ed esce dal ciclo
+            }
+        }
+
         // verifica se il nome è stato trovato
         if (found) {
             System.out.println("Benvenuto alla festa, " + name + "!");
